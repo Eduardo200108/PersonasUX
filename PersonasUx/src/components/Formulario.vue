@@ -1,73 +1,328 @@
+<script>
+import axios from "axios";
+let API_URL = "/api/guardarPersonasUxd.php";
+
+export default {
+  data() {
+    return {
+      nombre: "",
+      edad: "",
+      estadoCivil: "",
+      trabajo: "",
+      residencia: "",
+      cita: "",
+      citaAutor: "",
+      bio: "",
+      personalidad01: "0",
+      personalidad02: "0",
+      personalidad03: "0",
+      personalidad04: "0",
+      objetivos: [],
+      frustraciones: [],
+      motivaciones: [],
+      porcentaje: "",
+      marcas: "",
+    };
+  },
+  methods: {
+    submit() {
+      axios
+        .post(API_URL, {
+          nombre: this.nombre,
+          edad: this.edad,
+          estadoCivil: this.estadoCivil,
+          trabajo: this.trabajo,
+          residencia: this.residencia,
+          cita: this.cita,
+          citaAutor: this.citaAutor,
+          bio: this.bio,
+          personalidad01: this.personalidad01,
+          personalidad02: this.personalidad02,
+          personalidad03: this.personalidad03,
+          personalidad04: this.personalidad04,
+          objetivos: this.objetivos,
+          frustraciones: this.frustraciones,
+          motivaciones: this.motivaciones,
+          porcentaje: this.porcentaje,
+          marcas: this.marcas,
+        })
+        .then((response) => {
+          console.log(response.status);
+        });
+    },
+  },
+};
+</script>
 
 <template>
-
-
-<form class="w-full max-w-lg">
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2" for="grid-first-name">
-        nombre
+  <div class="font-sans">
+    <div class="min-h-screen flex sm:justify-center bg-[#fff7ed]" >
+      <div
+        style="margin: 100px 10px 100px 10px"
+        class="rounded-3xl px-6 py-4 bg-[#A3BAB4] border"
+      >
+        <label
+          for=""
+          class="block mt-3 text-sm text-gray-700 text-center font-semibold"
+        >
+          Registrato de ISCLAB
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text">
-        <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-      </div>
-      <div class="w-full md:w-1/2 px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-          Edad
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" >
-      </div>
-    </div>
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-          Password
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
-        <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
-      </div>
-    </div>
-    <div class="flex flex-wrap -mx-3 mb-2">
-      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-          City
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
-      </div>
-      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-          estado civil
-        </label>
-        <div class="relative">
-          <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-            <option>soltero</option>
-            <option>casado</option>
-            <option>divorciado</option>
-            <option>separado</option>
-            <option>union libre </option>
-            <option>viudo</option>
-          </select>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        <form class="mt-20 w-96">
+          <div>
+            <label
+              for="nombre"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Nombres</label
+            >
+            <input
+              v-model="nombre"
+              type="text"
+              placeholder="Nombres"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
           </div>
-        </div>
-      </div>
-      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-          Zip
-        </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
+
+          <div class="mt-7">
+            <label
+              for="edad"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Edad</label
+            >
+            <input
+              v-model="edad"
+              type="number"
+              placeholder="Edad"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+
+          <label
+            for="estadoCivil"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+            >Estado civil</label
+          >
+          <select
+            v-model="estadoCivil"
+            class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+          >
+            <option selected>Estado civil</option>
+            <option value="1">Soltero</option>
+            <option value="2">Casado</option>
+            <option value="3">Divorciado</option>
+            <option value="4">Separado</option>
+            <option value="5">Union libre</option>
+            <option value="6">Viudo</option>
+          </select>
+
+          <div class="mt-7">
+            <label
+              for="residencia"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Residencia</label
+            >
+            <input
+              v-model="residencia"
+              type="text"
+              placeholder="Residencia"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="trabajo"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Trabajo</label
+            >
+            <input
+              v-model="trabajo"
+              type="text"
+              placeholder="Trabajo"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="cita"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Cita</label
+            >
+            <textarea
+              v-model="cita"
+              type="text"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            ></textarea>
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="citaAutor"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Cita Autor</label
+            >
+            <textarea
+              v-model="citaAutor"
+              type="text"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            ></textarea>
+          </div>
+          <div class="mt-7">
+            <label
+              for="bio"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Biografia</label
+            >
+            <textarea
+              v-model="bio"
+              type="text"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            ></textarea>
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="objetivos"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Objetivos</label
+            >
+            <input
+              v-model="objetivos"
+              type="text"
+              placeholder="Escribe objetivos"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="frustraciones"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Frustraciones</label
+            >
+            <input
+              v-model="frustraciones"
+              type="text"
+              placeholder="Escribe frustraciones"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="personalidad01"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >personalidad 1</label
+            >
+            <input
+              v-model="personalidad01"
+              type="range"
+              min="0"
+              max="100"
+              class="mt-1 block w-full border-none  bg-blue-600 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+            <span>{{ this.personalidad01 }}%</span>
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="personalidad02"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >personalidad 2</label
+            >
+            <input
+              v-model="personalidad02"
+              type="range"
+              min="0"
+              max="100"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+              
+              />
+              <span>{{ this.personalidad02 }}%</span>
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="personalidad03"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >personalidad 3</label
+            >
+            <input
+              v-model="personalidad03"
+              type="range"
+              min="0"
+              max="100"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+            <span>{{ this.personalidad03 }}%</span>
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="personalidad04"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >personalidad 4</label
+            >
+            <input
+              v-model="personalidad04"
+              type="range"
+              min="0"
+              max="100"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+            <span>{{ this.personalidad04 }}%</span>
+          </div>
+          <div></div>
+
+          <div class="mt-7">
+            <label
+              for="motivaciones"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Motivaciones</label
+            >
+            <input
+              v-model="motivaciones"
+              type="text"
+              placeholder="Escribe motivaciones"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="porcentaje"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Porcentaje</label
+            >
+            <input
+              v-model="porcentaje"
+              type="text"
+              class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+
+          <div class="mt-7">
+            <label
+              for="marcas"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-7"
+              >Marcas</label
+            >
+            <input
+              v-model="marcas"
+              type="text"
+              class="mt-3 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+          </div>
+          <div>
+            <button
+              class="mt-7 bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105"
+              @click="submit()"
+            >
+              Registrar
+            </button>
+          </div>
+        </form>
       </div>
     </div>
-</form>
-
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Button
-  </button>
-  
-  <!-- Extracting component classes: -->
-  <button class="btn btn-blue">
-    
-  </button>
+  </div>
 </template>
-  

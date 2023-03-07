@@ -11,9 +11,9 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      Aplicación SPA
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener"></a> 
-      <a href="https://vuejs.org/" target="_blank" rel="noopener"></a>.
+      You’ve successfully created a project with
+      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
   </div>
 </template>
@@ -39,12 +39,5 @@ h3 {
   .greetings h3 {
     text-align: left;
   }
-}
-</style>
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
-* {
-  
-  font-family: 'Fjalla One', sans-serif;
 }
 </style>
