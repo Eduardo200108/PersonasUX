@@ -1,8 +1,10 @@
 <script>
+import btnEnviar from "../components/btnSubmit.vue"
 import axios from "axios";
 let API_URL = "/api/guardarPersonasUxd.php";
 
 export default {
+  components:{btnEnviar},
   data() {
     return {
       nombre: "",
@@ -55,6 +57,10 @@ export default {
 </script>
 
 <template>
+
+<v-container fluid>
+      <img src="fondo.png" alt="">
+    </v-container>
   <div class="font-sans">
     <div class="min-h-screen flex sm:justify-center bg-[#c4b5fd]" >
       <div
@@ -63,11 +69,11 @@ export default {
       >
         <label
           for=""
-          class="block mt-3 text-sm text-gray-700 text-center font-semibold"
+          class="block mt-3 text-sm text-gray-700 text-left font-semibold"
         >
           Registrato de ISCLAB
         </label>
-        <form class="mt-20 w-96">
+        <form class="mt-12 w-96">
           <div>
             <label
               for="nombre"
@@ -103,7 +109,7 @@ export default {
           >
           <select
             v-model="estadoCivil"
-            class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            class="mt-4 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
           >
             <option selected>Estado civil</option>
             <option value="1">Soltero</option>
@@ -314,15 +320,16 @@ export default {
             />
           </div>
           <div>
-            <button
-              class="mt-7 bg-yellow-600 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105"
-              @click="submit()"
-            >
-              Registrar
-            </button>
+            <btnEnviar @click="submit">Registrar persona</btnEnviar>
           </div>
         </form>
       </div>
     </div>
   </div>
+
 </template>
+
+
+
+
+
