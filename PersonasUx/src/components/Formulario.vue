@@ -56,10 +56,10 @@ export default {
 
 <template>
   <div class="font-sans">
-    <div class="min-h-screen flex sm:justify-center bg-[#fff7ed]" >
+    <div class="min-h-screen flex sm:justify-center bg-[#c4b5fd]" >
       <div
         style="margin: 100px 10px 100px 10px"
-        class="rounded-3xl px-6 py-4 bg-[#A3BAB4] border"
+        
       >
         <label
           for=""
@@ -219,7 +219,7 @@ export default {
               type="range"
               min="0"
               max="100"
-              class="mt-1 block w-full border-none  bg-blue-600 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+              class="mt-1 block w-full border-none  bg-yellow-200 h-11 rounded-xl shadow-lg hover:bg-yellow-200 focus:bg-yellow-200 focus:ring-0"
             />
             <span>{{ this.personalidad01 }}%</span>
           </div>
@@ -315,7 +315,7 @@ export default {
           </div>
           <div>
             <button
-              class="mt-7 bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105"
+              class="mt-7 bg-yellow-600 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105"
               @click="submit()"
             >
               Registrar
