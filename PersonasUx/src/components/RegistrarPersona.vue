@@ -47,7 +47,9 @@
     <br>
     {{ pers01 }} {{ pers02 }}
     <br>
-    <btnEnviar :desactivar="false" @click="guardarLocal">Registrar persona</btnEnviar>
+    <btnEnviar></btnEnviar>
+
+    <btnEnviar @click="submit">Registrar persona</btnEnviar>
     <btnEnviar :desactivar="false" @click="recuperarLocal" >Editar persona</btnEnviar>
     <btnEnviar :desactivar="true">Eliminar persona</btnEnviar>
 </form>

@@ -61,9 +61,9 @@ export default {
   <div class="max-w-sm rounded overflow-hidden shadow-lg">
   <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
   <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+    <div class="font-bold text-xl mb-2">Bienvenido a Personas UX</div>
     <p class="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      Un formulario es un documento, físico o digital, elaborado para que un usuario introduzca datos estructurados (nombres, apellidos, dirección, fecha, etc.) en las zonas correspondientes, para ser almacenados y procesados posteriormente. Esto ayuda a que diferentes instancias registren datos personales de quien los llena para posteriormente ser acreedor al servicio solicitado, siempre y cuando, los datos sean llenados correctamente.
     </p>
   </div>
   <div class="px-6 pt-4 pb-2">
