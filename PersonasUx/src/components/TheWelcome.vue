@@ -12,31 +12,30 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>Bienvenido a personas Ux
+    </template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    
+    <a href="https://vuejs.org/" target="_blank" rel="noopener">Proyecto unidad 1</a>
+    
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading>Tooling</template>
-
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank">Cypress Component Testing</a>.
+    <template #heading>¿que es personas ux?</template>
+    Una UX Persona es un personaje ficticio que representa a tus usuarios objetivo. Las personas son una herramienta UX extremadamente valiosa, que permiten comprender mejor a tu público objetivo y, en consecuencia, tomar decisiones de diseño.
+    
+    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener"></a>
+    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener"></a> 
+    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener"></a>
+    <a href="https://www.cypress.io/" target="_blank" rel="noopener"></a>
+    <a href="https://on.cypress.io/component" target="_blank"></a>
 
     <br />
 
-    More instructions are available in <code>README.md</code>.
+    <code></code>
   </WelcomeItem>
 
   <WelcomeItem>
