@@ -15,7 +15,7 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #heading>Bienvenido a personas Ux
     </template>
 
-    
+  <img class="w-24" src="/ux.jpg" alt="formulario ">
     <a href="https://vuejs.org/" target="_blank" rel="noopener">Proyecto unidad 1</a>
     
   </WelcomeItem>
@@ -42,15 +42,14 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>Ecosystem</template>
+    <template #heading>¿Cuál es la importancia del diseño UX?</template>
 
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
+    El diseño y la usabilidad de las páginas web son esenciales para que el cliente pueda tener una buena experiencia en ella. Esto se traduce en un buen diseño UX, algo en lo que toda aquella persona que quiere emprender un proyecto digital debe fijarse. A continuación te mostramos cuál es la importancia del diseño […]
+    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener"></a>
+    <a href="https://router.vuejs.org/" target="_blank" rel="noopener"></a>
+    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener"></a>
+    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener"></a>
+    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener"></a>
     a visit.
   </WelcomeItem>
 
@@ -58,28 +57,26 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <CommunityIcon />
     </template>
-    <template #heading>Community</template>
+    <template #heading></template>
 
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
+   
+    <a href="https://chat.vuejs.org" target="_blank" rel="noopener"></a>
     <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
+      ></a
+    >
+    <a href="https://news.vuejs.org" target="_blank" rel="noopener"></a> 
+    
+    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"></a>
+    
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
       <SupportIcon />
     </template>
-    <template #heading>Support Vue</template>
+    <template #heading></template>
 
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
+    
+    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener"></a>.
   </WelcomeItem>
 </template>
