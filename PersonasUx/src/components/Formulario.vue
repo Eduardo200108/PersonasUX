@@ -59,7 +59,7 @@ export default {
 <template>
   
   <div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+  <img class="w-full" src="/Logo.png" alt="formulario ">
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">Bienvenido a Personas UX</div>
     <p class="text-gray-700 text-base">
@@ -76,7 +76,7 @@ export default {
   
   
   <div class="font-sans">
-    <div class="min-h-screen flex sm:left bg-[#c4b5fd]" >
+    <div class="min-h-screen flex sm:center bg-[rgb(196,181,253)]" >
       <div
         style="margin: 100px 10px 100px 10px"
         
